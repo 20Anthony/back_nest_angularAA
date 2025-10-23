@@ -8,16 +8,16 @@ export class ConfigService {
 
   constructor() {
     const env = process.env.NODE_ENV || 'development';
-    const envFilePath = `${__dirname}/../../.env.${env}`;
+    const envFilePath = `${__dirname}/../../../.env.${env}`;
     const existsPath = fs.existsSync(envFilePath);
 
     if (!existsPath) {
-      console.log(`El archivo .env.${env} no existe`);
+      console.log(`.env.${process.env.NODE_ENV} no existe`);
       process.exit(0);
     }
 
     this.envConfig = parse(fs.readFileSync(envFilePath));
-    console.log(` Cargado archivo de entorno: .env.${env}`);
+    console.log("*********",envFilePath);
   }
 
   get(key: string): string {
