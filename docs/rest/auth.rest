@@ -1,24 +1,25 @@
-POST  http://127.0.0.1:3000/auth/register
+POST http://127.0.0.1:3000/auth/register
 Content-Type: application/json
 
 {
-    "name":"prueba",
-    "email":"15anthonydj@gmail.com",
-    "password":"121234"
+    "name": "Alexis Coronel",
+    "email": "alexis@yavi.com",
+    "password": "123456"
 }
 
-### login sin conexion a BDD
-
+### login sin conexion a DB
 POST http://127.0.0.1:3000/auth/login
 Content-Type: application/json
 
 {
-    "name":"prueba2",
-    "email":"rp2@hm.com",
-    "password":"1234567"
+    "name": "Alexis Coronel",
+    "email": "alexis@yavi.com",
+    "password": "123456"
 }
 
 ### users
-
 GET http://127.0.0.1:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3NjA1ODQ0MjgsImV4cCI6MTc2MDU4NDQ4OH0.cBsUSRFQ8cZLS0qeO3hX9QxqxfZMSDomgtrp63eopqg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvbnlAeWF2aS5jb20iLCJpZCI6MSwiaWF0IjoxNzY0MTI4ODMyLCJleHAiOjE3NjQxMzI0MzJ9.0-lS3a1_m-3r-b2Dxv_PWpPe3CYL7XSGvTvYWxvpbJ
+
+
+

@@ -6,30 +6,22 @@ import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "ty
 
 export class Producto {
     @PrimaryGeneratedColumn()
-    id:number;
-
-    @Column()
+    id: number;
+    @Column({type:'varchar', length:250})
     nombre: string;
-
-    @Column()
-    precio: number;
-
-    @Column()
+    @Column({type:'decimal', precision:10, scale:2})
+    precio: number; 
+    @Column({type:'int'})
     stock: number;
-    
-    @Column()
-    image: string;
-
-    @Column()
+    @Column({type:'varchar', length:255, nullable:true})
+    imagen: string;
+    @Column({type:'text', nullable:true})
     descripcion: string;
-
-    @Column()
+    @Column({type:'boolean', default:true})
     estado: boolean;
-
-    @ManyToOne(()=>Categoria, (cat)=>cat.producto)
+    @ManyToOne(()=>Categoria,(cat)=>cat.producto)
     categoria: Categoria;
 
-    @OneToMany(()=>PedidoProducto,pedprod=>pedprod.producto )
+    @OneToMany(()=>PedidoProducto,pedpro=>pedpro.producto)
     pedidoProducto: PedidoProducto[];
 }
-
